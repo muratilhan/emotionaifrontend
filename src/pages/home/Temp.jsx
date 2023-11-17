@@ -10,9 +10,11 @@ const Temp = () => {
   const handleClick = (e) => {
     e.preventDefault();
     //navigate("/questions");
-    const openCamera = async () => {
-      const res = await axios.get("https://pythontest-34h7.onrender.com/start");
-      console.log(res)
+    const openCamera =  () => {
+      fetch('https://pythontest-34h7.onrender.com/start')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
       //console.log(res)
     };
     openCamera();

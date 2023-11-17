@@ -11,7 +11,7 @@ const Temp = () => {
     e.preventDefault();
     //navigate("/questions");
     const openCamera = async () => {
-      const res = await axios.post("https://pythontest-34h7.onrender.com/start");
+      const res = await axios.get("https://pythontest-34h7.onrender.com/start");
       console.log(res)
       //console.log(res)
     };
